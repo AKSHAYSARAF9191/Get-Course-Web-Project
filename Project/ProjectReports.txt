@@ -1,0 +1,102 @@
+
+
+Date -> 08/07/2021
+
+SRS content : 
+
+First page (Same)
+
+Abstract 
+
+Content table 
+
+Chapter 1 : Intro
+                    Description 
+
+Chapter 3 : optional 
+
+Chapter 4 : 
+
+
+
+Use case 
+Class diagram
+Activity
+Sequence  =>Done
+ER        =>Done
+
+
+============================================================================
+
+1.Uses Case->
+
+ a.admin(root User)           b.Student            c.Teacher         d.Login     E.Course    D.Subject
+                              
+							  
+   Id                         ID                       Id            UserName    courseId    SubjectId
+   FName                      FName                    FName         Password    SubjectId   SubjectName
+   LName                      LName                    LName                     TeacherId
+   Email                      Email                    Email                     StudentID
+   Mobile                     Mobile                   Mobile
+   password                   Password                 password
+   //Address                  Address                  Address
+   //city                     city                     city
+   //Zip                      state                    state
+                              zip                      zip
+                              DOB                      Experiance
+                              Last Education           Specialization
+                                                       Qualification                              
+ //create Account                                 
+                                                  
+ 
+
+
+
+
+[Admin]-(Sign In)
+(Sign In)>(verify Admin)
+(Sign In)<(display error)
+[admin]-(See Student Details)
+[admin]-(see course feedback)
+[admin]-(generate report)
+
+[Student]-(sign In)
+(Sign In)>(verify Admin)
+(Sign In)<(display error)
+[Student]-(view courses)
+[Student]-(register course)
+[Student]-(get a notes)
+[Student]-(see progress report)
+
+
+[Teacher]-(sign In)
+(Sign In)>(verify Admin)
+(Sign In)<(display error)
+[Teacher]-(view courses)
+[Teacher]-(register course)
+[Teacher]-(get a notes)
+[Teacher]-(see progress report)
+
+
+class Digram
+===============
+Student
+=========
+
+[Student|+code:string;+firstName:String;+lastName:String;+Email:String;+Mobile:Number;
++password:String;+studentaddress:string;+city:String;+State:String;+zip:int;+DOB:Date|
++getCourse();+registerStudent();+viewStudent();+seeProgressReport()]
+
+[Teacher|+code:string;+firstName:String;+lastName:String;+Email:String;+Mobile:Number;
++password:String;+address:string;+city:String;+State:String;+zip:int;+DOB:Date;+Qualification:String;
++Specialization:String;+Experiance:int|
++getCourse();+generateNotes();+viewStudent();+generateStudentProgressReport()]
+
+[Admin|+id:int;+firstName:String;+lastName:String;+Email:String;+Mobile:Number;
++password:String|
++assignCourse();+viewStudent();+seeFeedBack()]
+
+[Course|+id:int;+courseName:String;+teacherName:String;+Email:String;+Mobile:Number|
++showCourse();+showTeacher();+showVediolecture()]
+
+[Login|+userName:String;+password:String;]
